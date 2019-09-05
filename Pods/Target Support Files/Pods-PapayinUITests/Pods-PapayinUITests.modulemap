@@ -1,0 +1,6 @@
+framework module Pods_PapayinUITests {
+  umbrella header "Pods-PapayinUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

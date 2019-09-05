@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D894BA6A155DED054A195A3 /* Pods_PapayinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E473F2FE3D790539BE2DCBC3 /* Pods_PapayinTests.framework */; };
+		920D91AFD1CDBC39D9A2732C /* Pods_Papayin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC8B2C2E99D2204D0072905D /* Pods_Papayin.framework */; };
+		D11790602320BDC400118812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117905F2320BDC400118812 /* AppDelegate.swift */; };
+		D11790622320BDC400118812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790612320BDC400118812 /* ViewController.swift */; };
+		D11790652320BDC400118812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11790632320BDC400118812 /* Main.storyboard */; };
+		D11790682320BDC400118812 /* Papayin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D11790662320BDC400118812 /* Papayin.xcdatamodeld */; };
+		D117906A2320BDC500118812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11790692320BDC500118812 /* Assets.xcassets */; };
+		D117906D2320BDC500118812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D117906B2320BDC500118812 /* LaunchScreen.storyboard */; };
+		D11790782320BDC500118812 /* PapayinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790772320BDC500118812 /* PapayinTests.swift */; };
+		D11790832320BDC500118812 /* PapayinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790822320BDC500118812 /* PapayinUITests.swift */; };
+		D11790932320D59200118812 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790922320D59200118812 /* Constants.swift */; };
+		D117909A2320DF2600118812 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11790992320DF2600118812 /* Login.storyboard */; };
+		D117909D2321606900118812 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D117909C2321606900118812 /* Movie.storyboard */; };
+		D11790A02321632100118812 /* TVShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D117909F2321632100118812 /* TVShow.storyboard */; };
+		D11790A22321637A00118812 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A12321637A00118812 /* MovieCollectionViewCell.swift */; };
+		D11790A4232163D400118812 /* MovieCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A3232163D400118812 /* MovieCollectionViewController.swift */; };
+		D11790A6232163E600118812 /* TVShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A5232163E600118812 /* TVShowTableViewController.swift */; };
+		D11790A8232163F800118812 /* TVShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A7232163F800118812 /* TVShowTableViewCell.swift */; };
+		DCED60AE00FA0EA72B04E279 /* Pods_PapayinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36EC3803E3CF2B938498505 /* Pods_PapayinUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D11790742320BDC500118812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D11790542320BDC400118812 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D117905B2320BDC400118812;
+			remoteInfo = Papayin;
+		};
+		D117907F2320BDC500118812 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D11790542320BDC400118812 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D117905B2320BDC400118812;
+			remoteInfo = Papayin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3D07FC47D7DFDD45CEADCA9E /* Pods-PapayinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapayinTests.release.xcconfig"; path = "Target Support Files/Pods-PapayinTests/Pods-PapayinTests.release.xcconfig"; sourceTree = "<group>"; };
+		410D875D937F3457D1525A64 /* Pods-Papayin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Papayin.release.xcconfig"; path = "Target Support Files/Pods-Papayin/Pods-Papayin.release.xcconfig"; sourceTree = "<group>"; };
+		73111CFF6AF3326C5F843426 /* Pods-PapayinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapayinUITests.release.xcconfig"; path = "Target Support Files/Pods-PapayinUITests/Pods-PapayinUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D9B407208903066E7E96B7D /* Pods-PapayinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapayinTests.debug.xcconfig"; path = "Target Support Files/Pods-PapayinTests/Pods-PapayinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABD3DF8B81EAA52CF6CA3D85 /* Pods-Papayin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Papayin.debug.xcconfig"; path = "Target Support Files/Pods-Papayin/Pods-Papayin.debug.xcconfig"; sourceTree = "<group>"; };
+		C36EC3803E3CF2B938498505 /* Pods_PapayinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PapayinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D117905C2320BDC400118812 /* Papayin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Papayin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D117905F2320BDC400118812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D11790612320BDC400118812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D11790642320BDC400118812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D11790672320BDC400118812 /* Papayin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Papayin.xcdatamodel; sourceTree = "<group>"; };
+		D11790692320BDC500118812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D117906C2320BDC500118812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D117906E2320BDC500118812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D11790732320BDC500118812 /* PapayinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PapayinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11790772320BDC500118812 /* PapayinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapayinTests.swift; sourceTree = "<group>"; };
+		D11790792320BDC500118812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D117907E2320BDC500118812 /* PapayinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PapayinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D11790822320BDC500118812 /* PapayinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapayinUITests.swift; sourceTree = "<group>"; };
+		D11790842320BDC500118812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D11790922320D59200118812 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D11790992320DF2600118812 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D117909C2321606900118812 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		D117909F2321632100118812 /* TVShow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVShow.storyboard; sourceTree = "<group>"; };
+		D11790A12321637A00118812 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		D11790A3232163D400118812 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
+		D11790A5232163E600118812 /* TVShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTableViewController.swift; sourceTree = "<group>"; };
+		D11790A7232163F800118812 /* TVShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTableViewCell.swift; sourceTree = "<group>"; };
+		DBA02E325FA1B7821511A0BF /* Pods-PapayinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapayinUITests.debug.xcconfig"; path = "Target Support Files/Pods-PapayinUITests/Pods-PapayinUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E473F2FE3D790539BE2DCBC3 /* Pods_PapayinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PapayinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8B2C2E99D2204D0072905D /* Pods_Papayin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Papayin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D11790592320BDC400118812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920D91AFD1CDBC39D9A2732C /* Pods_Papayin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D11790702320BDC500118812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D894BA6A155DED054A195A3 /* Pods_PapayinTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D117907B2320BDC500118812 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCED60AE00FA0EA72B04E279 /* Pods_PapayinUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D0F22A42C2FD4AF78BF8DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC8B2C2E99D2204D0072905D /* Pods_Papayin.framework */,
+				E473F2FE3D790539BE2DCBC3 /* Pods_PapayinTests.framework */,
+				C36EC3803E3CF2B938498505 /* Pods_PapayinUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D11790532320BDC400118812 = {
+			isa = PBXGroup;
+			children = (
+				D117905E2320BDC400118812 /* Papayin */,
+				D11790762320BDC500118812 /* PapayinTests */,
+				D11790812320BDC500118812 /* PapayinUITests */,
+				D117905D2320BDC400118812 /* Products */,
+				DAA5A559889C1679AFA2BB62 /* Pods */,
+				18D0F22A42C2FD4AF78BF8DA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D117905D2320BDC400118812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D117905C2320BDC400118812 /* Papayin.app */,
+				D11790732320BDC500118812 /* PapayinTests.xctest */,
+				D117907E2320BDC500118812 /* PapayinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D117905E2320BDC400118812 /* Papayin */ = {
+			isa = PBXGroup;
+			children = (
+				D11790902320C15700118812 /* AppDelegate */,
+				D11790962320DE4400118812 /* Scenes */,
+				D117909E2321630F00118812 /* TVShow */,
+			);
+			path = Papayin;
+			sourceTree = "<group>";
+		};
+		D11790762320BDC500118812 /* PapayinTests */ = {
+			isa = PBXGroup;
+			children = (
+				D11790772320BDC500118812 /* PapayinTests.swift */,
+				D11790792320BDC500118812 /* Info.plist */,
+			);
+			path = PapayinTests;
+			sourceTree = "<group>";
+		};
+		D11790812320BDC500118812 /* PapayinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D11790822320BDC500118812 /* PapayinUITests.swift */,
+				D11790842320BDC500118812 /* Info.plist */,
+			);
+			path = PapayinUITests;
+			sourceTree = "<group>";
+		};
+		D11790902320C15700118812 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D11790912320D57A00118812 /* Extension */,
+				D117905F2320BDC400118812 /* AppDelegate.swift */,
+				D11790692320BDC500118812 /* Assets.xcassets */,
+				D11790662320BDC400118812 /* Papayin.xcdatamodeld */,
+				D117906E2320BDC500118812 /* Info.plist */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D11790912320D57A00118812 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D11790922320D59200118812 /* Constants.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D11790942320DD3700118812 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D11790992320DF2600118812 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D11790962320DE4400118812 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D11790982320DE7000118812 /* LaunchScreen */,
+				D11790942320DD3700118812 /* Login */,
+				D11790972320DE5A00118812 /* Main */,
+				D117909B2321605100118812 /* Movie */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D11790972320DE5A00118812 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D11790632320BDC400118812 /* Main.storyboard */,
+				D11790612320BDC400118812 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D11790982320DE7000118812 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D117906B2320BDC500118812 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		D117909B2321605100118812 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				D117909C2321606900118812 /* Movie.storyboard */,
+				D11790A3232163D400118812 /* MovieCollectionViewController.swift */,
+				D11790A12321637A00118812 /* MovieCollectionViewCell.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		D117909E2321630F00118812 /* TVShow */ = {
+			isa = PBXGroup;
+			children = (
+				D117909F2321632100118812 /* TVShow.storyboard */,
+				D11790A5232163E600118812 /* TVShowTableViewController.swift */,
+				D11790A7232163F800118812 /* TVShowTableViewCell.swift */,
+			);
+			path = TVShow;
+			sourceTree = "<group>";
+		};
+		DAA5A559889C1679AFA2BB62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABD3DF8B81EAA52CF6CA3D85 /* Pods-Papayin.debug.xcconfig */,
+				410D875D937F3457D1525A64 /* Pods-Papayin.release.xcconfig */,
+				7D9B407208903066E7E96B7D /* Pods-PapayinTests.debug.xcconfig */,
+				3D07FC47D7DFDD45CEADCA9E /* Pods-PapayinTests.release.xcconfig */,
+				DBA02E325FA1B7821511A0BF /* Pods-PapayinUITests.debug.xcconfig */,
+				73111CFF6AF3326C5F843426 /* Pods-PapayinUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D117905B2320BDC400118812 /* Papayin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D11790872320BDC500118812 /* Build configuration list for PBXNativeTarget "Papayin" */;
+			buildPhases = (
+				D394C679F687161302F467F1 /* [CP] Check Pods Manifest.lock */,
+				D11790582320BDC400118812 /* Sources */,
+				D11790592320BDC400118812 /* Frameworks */,
+				D117905A2320BDC400118812 /* Resources */,
+				844AD31D482B2D77B0CEDE99 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Papayin;
+			productName = Papayin;
+			productReference = D117905C2320BDC400118812 /* Papayin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D11790722320BDC500118812 /* PapayinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D117908A2320BDC500118812 /* Build configuration list for PBXNativeTarget "PapayinTests" */;
+			buildPhases = (
+				DE50B52E939A127FC84382C6 /* [CP] Check Pods Manifest.lock */,
+				D117906F2320BDC500118812 /* Sources */,
+				D11790702320BDC500118812 /* Frameworks */,
+				D11790712320BDC500118812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D11790752320BDC500118812 /* PBXTargetDependency */,
+			);
+			name = PapayinTests;
+			productName = PapayinTests;
+			productReference = D11790732320BDC500118812 /* PapayinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D117907D2320BDC500118812 /* PapayinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D117908D2320BDC500118812 /* Build configuration list for PBXNativeTarget "PapayinUITests" */;
+			buildPhases = (
+				F400EDA3D1A17B8C27F23BFF /* [CP] Check Pods Manifest.lock */,
+				D117907A2320BDC500118812 /* Sources */,
+				D117907B2320BDC500118812 /* Frameworks */,
+				D117907C2320BDC500118812 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D11790802320BDC500118812 /* PBXTargetDependency */,
+			);
+			name = PapayinUITests;
+			productName = PapayinUITests;
+			productReference = D117907E2320BDC500118812 /* PapayinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D11790542320BDC400118812 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Example;
+				TargetAttributes = {
+					D117905B2320BDC400118812 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					D11790722320BDC500118812 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D117905B2320BDC400118812;
+					};
+					D117907D2320BDC500118812 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = D117905B2320BDC400118812;
+					};
+				};
+			};
+			buildConfigurationList = D11790572320BDC400118812 /* Build configuration list for PBXProject "Papayin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D11790532320BDC400118812;
+			productRefGroup = D117905D2320BDC400118812 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D117905B2320BDC400118812 /* Papayin */,
+				D11790722320BDC500118812 /* PapayinTests */,
+				D117907D2320BDC500118812 /* PapayinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D117905A2320BDC400118812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D117909D2321606900118812 /* Movie.storyboard in Resources */,
+				D117909A2320DF2600118812 /* Login.storyboard in Resources */,
+				D117906D2320BDC500118812 /* LaunchScreen.storyboard in Resources */,
+				D11790A02321632100118812 /* TVShow.storyboard in Resources */,
+				D117906A2320BDC500118812 /* Assets.xcassets in Resources */,
+				D11790652320BDC400118812 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D11790712320BDC500118812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D117907C2320BDC500118812 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		844AD31D482B2D77B0CEDE99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Papayin/Pods-Papayin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Papayin/Pods-Papayin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Papayin/Pods-Papayin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D394C679F687161302F467F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Papayin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE50B52E939A127FC84382C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PapayinTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F400EDA3D1A17B8C27F23BFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PapayinUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D11790582320BDC400118812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11790682320BDC400118812 /* Papayin.xcdatamodeld in Sources */,
+				D11790622320BDC400118812 /* ViewController.swift in Sources */,
+				D11790A8232163F800118812 /* TVShowTableViewCell.swift in Sources */,
+				D11790A22321637A00118812 /* MovieCollectionViewCell.swift in Sources */,
+				D11790A6232163E600118812 /* TVShowTableViewController.swift in Sources */,
+				D11790602320BDC400118812 /* AppDelegate.swift in Sources */,
+				D11790932320D59200118812 /* Constants.swift in Sources */,
+				D11790A4232163D400118812 /* MovieCollectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D117906F2320BDC500118812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11790782320BDC500118812 /* PapayinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D117907A2320BDC500118812 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D11790832320BDC500118812 /* PapayinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D11790752320BDC500118812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D117905B2320BDC400118812 /* Papayin */;
+			targetProxy = D11790742320BDC500118812 /* PBXContainerItemProxy */;
+		};
+		D11790802320BDC500118812 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D117905B2320BDC400118812 /* Papayin */;
+			targetProxy = D117907F2320BDC500118812 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D11790632320BDC400118812 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D11790642320BDC400118812 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D117906B2320BDC500118812 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D117906C2320BDC500118812 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D11790852320BDC500118812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D11790862320BDC500118812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D11790882320BDC500118812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD3DF8B81EAA52CF6CA3D85 /* Pods-Papayin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = "$(SRCROOT)/Papayin/AppDelegate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Papayin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D11790892320BDC500118812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 410D875D937F3457D1525A64 /* Pods-Papayin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = "$(SRCROOT)/Papayin/AppDelegate/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Papayin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D117908B2320BDC500118812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D9B407208903066E7E96B7D /* Pods-PapayinTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = PapayinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PapayinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Papayin.app/Papayin";
+			};
+			name = Debug;
+		};
+		D117908C2320BDC500118812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D07FC47D7DFDD45CEADCA9E /* Pods-PapayinTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = PapayinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PapayinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Papayin.app/Papayin";
+			};
+			name = Release;
+		};
+		D117908E2320BDC500118812 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA02E325FA1B7821511A0BF /* Pods-PapayinUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = PapayinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PapayinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Papayin;
+			};
+			name = Debug;
+		};
+		D117908F2320BDC500118812 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73111CFF6AF3326C5F843426 /* Pods-PapayinUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ4Y5Q73BC;
+				INFOPLIST_FILE = PapayinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.PapayinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Papayin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D11790572320BDC400118812 /* Build configuration list for PBXProject "Papayin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D11790852320BDC500118812 /* Debug */,
+				D11790862320BDC500118812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D11790872320BDC500118812 /* Build configuration list for PBXNativeTarget "Papayin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D11790882320BDC500118812 /* Debug */,
+				D11790892320BDC500118812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D117908A2320BDC500118812 /* Build configuration list for PBXNativeTarget "PapayinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D117908B2320BDC500118812 /* Debug */,
+				D117908C2320BDC500118812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D117908D2320BDC500118812 /* Build configuration list for PBXNativeTarget "PapayinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D117908E2320BDC500118812 /* Debug */,
+				D117908F2320BDC500118812 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D11790662320BDC400118812 /* Papayin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D11790672320BDC400118812 /* Papayin.xcdatamodel */,
+			);
+			currentVersion = D11790672320BDC400118812 /* Papayin.xcdatamodel */;
+			path = Papayin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D11790542320BDC400118812 /* Project object */;
+}
