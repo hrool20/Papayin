@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Papayin" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +20,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Pvz-Va-U9B"/>
+                    <navigationItem key="navigationItem" id="zKq-sO-xJq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-559" y="868"/>
+            <point key="canvasLocation" x="-562" y="1546"/>
         </scene>
         <!--Movie-->
         <scene sceneID="6xo-m9-oyJ">
@@ -34,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1V3-1n-Mos" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="1255"/>
+            <point key="canvasLocation" x="135" y="1255"/>
         </scene>
         <!--TVShow-->
         <scene sceneID="G37-co-JH6">
@@ -44,7 +44,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmy-Lq-pt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="1255"/>
+            <point key="canvasLocation" x="835" y="1255"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9gC-ef-QOK">
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="97D-sC-qcB"/>
+                        <segue destination="NFT-wy-6MT" kind="relationship" relationship="viewControllers" id="97D-sC-qcB"/>
                         <segue destination="biS-sn-eDT" kind="relationship" relationship="viewControllers" id="Ym0-0O-0Lr"/>
                         <segue destination="pJi-Bg-SAc" kind="relationship" relationship="viewControllers" id="fpX-ZJ-xy0"/>
                     </connections>
@@ -83,7 +83,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uha-9T-bmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="868"/>
+            <point key="canvasLocation" x="136" y="872"/>
         </scene>
         <!--TV Shows-->
         <scene sceneID="Y11-x5-iGU">
@@ -102,7 +102,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4iK-in-5iY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="868"/>
+            <point key="canvasLocation" x="836" y="872"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="vGg-aG-bw4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NFT-wy-6MT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="Pvz-Va-U9B"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="obl-f9-r8g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WSj-AJ-RNm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Biz-wS-eRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-561" y="872"/>
         </scene>
     </scenes>
 </document>
