@@ -25,6 +25,8 @@
 		D11790A4232163D400118812 /* MovieCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A3232163D400118812 /* MovieCollectionViewController.swift */; };
 		D11790A6232163E600118812 /* TVShowTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A5232163E600118812 /* TVShowTableViewController.swift */; };
 		D11790A8232163F800118812 /* TVShowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A7232163F800118812 /* TVShowTableViewCell.swift */; };
+		D14C87832321B9EA00EA7504 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C87822321B9EA00EA7504 /* Movie.swift */; };
+		D14C878523220C0900EA7504 /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14C878423220C0900EA7504 /* TVShow.swift */; };
 		DCED60AE00FA0EA72B04E279 /* Pods_PapayinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C36EC3803E3CF2B938498505 /* Pods_PapayinUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		D11790A3232163D400118812 /* MovieCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewController.swift; sourceTree = "<group>"; };
 		D11790A5232163E600118812 /* TVShowTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTableViewController.swift; sourceTree = "<group>"; };
 		D11790A7232163F800118812 /* TVShowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowTableViewCell.swift; sourceTree = "<group>"; };
+		D14C87822321B9EA00EA7504 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		D14C878423220C0900EA7504 /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		DBA02E325FA1B7821511A0BF /* Pods-PapayinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PapayinUITests.debug.xcconfig"; path = "Target Support Files/Pods-PapayinUITests/Pods-PapayinUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E473F2FE3D790539BE2DCBC3 /* Pods_PapayinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PapayinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC8B2C2E99D2204D0072905D /* Pods_Papayin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Papayin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				D11790902320C15700118812 /* AppDelegate */,
+				D14C87812321B9D200EA7504 /* Models */,
 				D11790962320DE4400118812 /* Scenes */,
 				D117909E2321630F00118812 /* TVShow */,
 			);
@@ -241,6 +246,15 @@
 				D11790A7232163F800118812 /* TVShowTableViewCell.swift */,
 			);
 			path = TVShow;
+			sourceTree = "<group>";
+		};
+		D14C87812321B9D200EA7504 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D14C87822321B9EA00EA7504 /* Movie.swift */,
+				D14C878423220C0900EA7504 /* TVShow.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DAA5A559889C1679AFA2BB62 /* Pods */ = {
@@ -482,11 +496,13 @@
 			files = (
 				D11790682320BDC400118812 /* Papayin.xcdatamodeld in Sources */,
 				D11790622320BDC400118812 /* ViewController.swift in Sources */,
+				D14C87832321B9EA00EA7504 /* Movie.swift in Sources */,
 				D11790A8232163F800118812 /* TVShowTableViewCell.swift in Sources */,
 				D11790A22321637A00118812 /* MovieCollectionViewCell.swift in Sources */,
 				D11790A6232163E600118812 /* TVShowTableViewController.swift in Sources */,
 				D11790602320BDC400118812 /* AppDelegate.swift in Sources */,
 				D11790932320D59200118812 /* Constants.swift in Sources */,
+				D14C878523220C0900EA7504 /* TVShow.swift in Sources */,
 				D11790A4232163D400118812 /* MovieCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
