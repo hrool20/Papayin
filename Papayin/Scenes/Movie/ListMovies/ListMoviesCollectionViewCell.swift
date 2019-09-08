@@ -55,6 +55,10 @@ class ListMoviesCollectionViewCell: UICollectionViewCell {
         self.movieImageView.layer.cornerRadius = 8
     }
     
+    override func prepareForReuse() {
+        self.showSkeletonAnimation()
+    }
+    
     func showSkeletonAnimation() -> Void {
         let gradient = SkeletonGradient(baseColor: UIColor("#EFEFEF") ?? .gray)
         let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .topLeftBottomRight, duration: 1)

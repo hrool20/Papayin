@@ -9,12 +9,14 @@
 import Foundation
 
 struct ListMoviesViewModel {
+    let movie: Movie
     let image: String
     let title: String
     let releaseDate: String
     let votesAverage: String
     
     init(movie: Movie) {
+        self.movie = movie
         self.image = "\(Constants.Url.imageUrl)\(movie.posterPath)"
         self.title = movie.title
         self.releaseDate = movie.releaseDate

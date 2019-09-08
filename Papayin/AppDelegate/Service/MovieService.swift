@@ -30,6 +30,20 @@ class MovieService {
         }
     }
     
+    func getMovieDetail(movieId: Int,
+                        successCompletion: @escaping (Movie) -> Void,
+                        failureCompletion: @escaping (Error) -> Void) -> Void {
+        let parameters = [
+            "api_key": Constants.apiKey
+        ]
+        
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/movie/\(movieId)", parameters: parameters, successCompletion: { (response) in
+            successCompletion(Movie.init(fromJSONObject: response))
+        }) { (error) in
+            failureCompletion(error)
+        }
+    }
+    
     func getTVShows(successCompletion: @escaping ([TVShow]) -> Void,
                     failureCompletion: @escaping (Error) -> Void) -> Void {
         let dateFormatter = DateFormatter()

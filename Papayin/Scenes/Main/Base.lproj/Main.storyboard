@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="835" y="1255"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="9gC-ef-QOK">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DMJ-HZ-PpX" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DMJ-HZ-PpX" customClass="MainTabBarViewController" customModule="Papayin" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YwU-KY-HZV">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -57,6 +57,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="YwU-KY-HZV" id="odO-IW-JzY"/>
                         <segue destination="NFT-wy-6MT" kind="relationship" relationship="viewControllers" id="97D-sC-qcB"/>
                         <segue destination="biS-sn-eDT" kind="relationship" relationship="viewControllers" id="Ym0-0O-0Lr"/>
                         <segue destination="pJi-Bg-SAc" kind="relationship" relationship="viewControllers" id="fpX-ZJ-xy0"/>

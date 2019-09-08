@@ -42,15 +42,18 @@ class ListMoviesCollectionViewController: UICollectionViewController {
         }
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "showMovieDetail":
+//            let viewController = segue.destination as MovieDetailViewController
+            break
+        default:
+            break
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -73,6 +76,11 @@ class ListMoviesCollectionViewController: UICollectionViewController {
         }
         
         return UICollectionViewCell()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showMovieDetail", sender: self.listMoviesViewModels[indexPath.row].movie)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 
 }
