@@ -9,10 +9,14 @@
 import Foundation
 
 class Constants {
-    private static let url: String = "https://api.themoviedb.org"
-    private let imageUrl: String = "https://image.tmdb.org/t/p/original"
-    static var thirdVersionUrl: String {
-        return "\(self.url)/3"
+    static let apiKey = "752cd23fdb3336557bf3d8724e115570"
+    
+    struct Url {
+        private static let url: String = "https://api.themoviedb.org"
+        static let imageUrl: String = "https://image.tmdb.org/t/p/original"
+        static var thirdVersionUrl: String {
+            return "\(self.url)/3"
+        }
     }
     struct Header {
         static let applicationJSON: String = "application/json"

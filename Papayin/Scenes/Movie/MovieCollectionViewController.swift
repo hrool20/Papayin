@@ -1,5 +1,5 @@
 //
-//  MovieCollectionViewController.swift
+//  ListMoviesCollectionViewController.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/5/19.
@@ -8,20 +8,24 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class ListMoviesCollectionViewController: UICollectionViewController {
 
-class MovieCollectionViewController: UICollectionViewController {
-
+    private var movies: [Movie]!
+    private var isLoadedFromFirstTime: Bool!
+    private var page: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Movies"
+        
+        self.movies = []
+        self.isLoadedFromFirstTime = true
+        self.page = 1
+    }
+    
+    func getMovies(_ completion: (() -> Void)? = nil) -> Void {
+        
     }
 
     /*
@@ -37,18 +41,15 @@ class MovieCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return (!self.movies.isEmpty && !self.isLoadedFromFirstTime) ? self.movies.count : 3
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.reuseIdentifier, for: indexPath)
     
         // Configure the cell
     
