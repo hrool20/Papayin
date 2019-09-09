@@ -1,5 +1,5 @@
 //
-//  MovieCastCollectionViewController.swift
+//  CastCollectionViewController.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/8/19.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MovieCastCollectionViewController: UICollectionViewController {
+class CastCollectionViewController: UICollectionViewController {
 
-    var movieCastViewModels: [MovieCastViewModel]! {
+    var castViewModels: [CastViewModel]! {
         didSet {
             self.collectionView?.reloadData()
         }
@@ -20,7 +20,7 @@ class MovieCastCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.movieCastViewModels = []
+        self.castViewModels = []
         self.isLoadedFromFirstTime = true
     }
 
@@ -42,15 +42,15 @@ class MovieCastCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (!self.movieCastViewModels.isEmpty && !self.isLoadedFromFirstTime) ? self.movieCastViewModels.count : 5
+        return (!self.castViewModels.isEmpty && !self.isLoadedFromFirstTime) ? self.castViewModels.count : 5
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCastCollectionViewCell.reuseIdentifier, for: indexPath) as? MovieCastCollectionViewCell {
-            guard !self.movieCastViewModels.isEmpty else {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CastCollectionViewCell.reuseIdentifier, for: indexPath) as? CastCollectionViewCell {
+            guard !self.castViewModels.isEmpty else {
                 return cell
             }
-            cell.movieCastViewModel = self.movieCastViewModels[indexPath.row]
+            cell.castViewModel = self.castViewModels[indexPath.row]
             
             return cell
         }

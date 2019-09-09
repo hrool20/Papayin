@@ -10,7 +10,7 @@ import Foundation
 
 struct MovieDetailViewModel {
     let movie: Movie
-    let productionCompanies: [MovieCompanyProductionViewModel]
+    let productionCompanies: [ProductionCompanyViewModel]
     let image: String
     let name: String
     let votesAverage: String
@@ -28,8 +28,8 @@ struct MovieDetailViewModel {
         self.name = movie.title
         self.votesAverage = "\(String(format: "%.1f", movie.voteAverage))"
         self.overview = movie.overview
-        self.productionCompanies = movie.productionCompanies.map({ (companyProduction) -> MovieCompanyProductionViewModel in
-            return MovieCompanyProductionViewModel(companyProduction: companyProduction)
+        self.productionCompanies = movie.productionCompanies.map({ (productionCompany) -> ProductionCompanyViewModel in
+            return ProductionCompanyViewModel(productionCompany: productionCompany)
         })
         self.releaseDate = movie.releaseDate
         var genreAux = ""

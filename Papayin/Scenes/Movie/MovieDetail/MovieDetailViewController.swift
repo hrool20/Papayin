@@ -83,8 +83,8 @@ class MovieDetailViewController: UIViewController {
             }
             self.movieNameLabel.text = self.movieDetailViewModel.name
             self.overviewTextView.text = self.movieDetailViewModel.overview
-            if let companyViewController = self.childViewControllers.first as? MovieCompanyProductionCollectionViewController {
-                companyViewController.movieCompanyProductionViewModels = self.movieDetailViewModel.productionCompanies
+            if let companyViewController = self.childViewControllers.first as? ProductionCompanyCollectionViewController {
+                companyViewController.ProductionCompanyViewModels = self.movieDetailViewModel.productionCompanies
             }
             self.releaseLabel.text = self.movieDetailViewModel.releaseDate
             self.genresLabel.text = self.movieDetailViewModel.genres
@@ -101,11 +101,11 @@ class MovieDetailViewController: UIViewController {
     func getMovieCast() -> Void {
         MovieService.shared.getMovieCast(movieId: self.movieId,
         successCompletion: { (cast) in
-            let movieCastViewModels = cast.map({ (aux) -> MovieCastViewModel in
-                return MovieCastViewModel(cast: aux)
+            let castViewModels = cast.map({ (aux) -> CastViewModel in
+                return CastViewModel(cast: aux)
             })
-            if let castViewController = self.childViewControllers.last as? MovieCastCollectionViewController {
-                castViewController.movieCastViewModels = movieCastViewModels
+            if let castViewController = self.childViewControllers.last as? CastCollectionViewController {
+                castViewController.castViewModels = castViewModels
             }
         }) { (error) in
             // MARK: Make an action

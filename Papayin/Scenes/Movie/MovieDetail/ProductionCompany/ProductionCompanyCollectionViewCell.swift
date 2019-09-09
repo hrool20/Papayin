@@ -1,5 +1,5 @@
 //
-//  MovieCompanyProductionCollectionViewCell.swift
+//  ProductionCompanyCollectionViewCell.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/8/19.
@@ -9,22 +9,22 @@
 import UIKit
 import SkeletonView
 
-class MovieCompanyProductionCollectionViewCell: UICollectionViewCell {
+class ProductionCompanyCollectionViewCell: UICollectionViewCell {
     
     static var reuseIdentifier: String {
-        return "companyProductionViewCell"
+        return "productionCompanyViewCell"
     }
     @IBOutlet weak var companyImageView: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
-    var movieCompanyProductionViewModel: MovieCompanyProductionViewModel! {
+    var ProductionCompanyViewModel: ProductionCompanyViewModel! {
         didSet {
-            guard self.movieCompanyProductionViewModel != nil else {
+            guard self.ProductionCompanyViewModel != nil else {
                 return
             }
             
             self.hideSkeletonAnimation()
             
-            if let imageUrl = URL(string: self.movieCompanyProductionViewModel.image) {
+            if let imageUrl = URL(string: self.ProductionCompanyViewModel.image) {
                 self.companyImageView.setImage(withUrl: imageUrl, placeholderImage: nil) {
                     self.companyImageView.hideSkeleton()
                     self.layoutSubviews()
@@ -33,7 +33,7 @@ class MovieCompanyProductionCollectionViewCell: UICollectionViewCell {
                 self.companyImageView.image = #imageLiteral(resourceName: "movie_icon.png")
                 self.companyImageView.hideSkeleton()
             }
-            self.companyNameLabel.text = self.movieCompanyProductionViewModel.name
+            self.companyNameLabel.text = self.ProductionCompanyViewModel.name
         }
     }
     

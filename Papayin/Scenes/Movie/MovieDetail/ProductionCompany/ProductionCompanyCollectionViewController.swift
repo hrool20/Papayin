@@ -1,5 +1,5 @@
 //
-//  MovieCompanyProductionCollectionViewController.swift
+//  ProductionCompanyCollectionViewController.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/8/19.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MovieCompanyProductionCollectionViewController: UICollectionViewController {
+class ProductionCompanyCollectionViewController: UICollectionViewController {
 
-    var movieCompanyProductionViewModels: [MovieCompanyProductionViewModel]! {
+    var ProductionCompanyViewModels: [ProductionCompanyViewModel]! {
         didSet {
             self.collectionView?.reloadData()
         }
@@ -20,7 +20,7 @@ class MovieCompanyProductionCollectionViewController: UICollectionViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.movieCompanyProductionViewModels = []
+        self.ProductionCompanyViewModels = []
         self.isLoadedFromFirstTime = true
     }
 
@@ -42,15 +42,15 @@ class MovieCompanyProductionCollectionViewController: UICollectionViewController
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (!self.movieCompanyProductionViewModels.isEmpty && !self.isLoadedFromFirstTime) ? self.movieCompanyProductionViewModels.count : 4
+        return (!self.ProductionCompanyViewModels.isEmpty && !self.isLoadedFromFirstTime) ? self.ProductionCompanyViewModels.count : 4
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCompanyProductionCollectionViewCell.reuseIdentifier, for: indexPath) as? MovieCompanyProductionCollectionViewCell {
-            guard !self.movieCompanyProductionViewModels.isEmpty else {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductionCompanyCollectionViewCell.reuseIdentifier, for: indexPath) as? ProductionCompanyCollectionViewCell {
+            guard !self.ProductionCompanyViewModels.isEmpty else {
                 return cell
             }
-            cell.movieCompanyProductionViewModel = self.movieCompanyProductionViewModels[indexPath.row]
+            cell.ProductionCompanyViewModel = self.ProductionCompanyViewModels[indexPath.row]
             
             return cell
         }

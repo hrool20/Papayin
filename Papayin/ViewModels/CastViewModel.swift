@@ -1,5 +1,5 @@
 //
-//  MovieCastViewModel.swift
+//  CastViewModel.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/8/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MovieCastViewModel {
+struct CastViewModel {
     let image: String
     let name: String
     let character: String

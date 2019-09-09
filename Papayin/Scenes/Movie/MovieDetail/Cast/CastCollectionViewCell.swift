@@ -1,5 +1,5 @@
 //
-//  MovieCastCollectionViewCell.swift
+//  CastCollectionViewCell.swift
 //  Papayin
 //
 //  Created by Hugo Rosado on 9/8/19.
@@ -9,7 +9,7 @@
 import UIKit
 import SkeletonView
 
-class MovieCastCollectionViewCell: UICollectionViewCell {
+class CastCollectionViewCell: UICollectionViewCell {
     
     static var reuseIdentifier: String {
         return "castViewCell"
@@ -17,22 +17,22 @@ class MovieCastCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var castImageView: UIImageView!
     @IBOutlet weak var castNameLabel: UILabel!
     @IBOutlet weak var characterLabel: UILabel!
-    var movieCastViewModel: MovieCastViewModel! {
+    var castViewModel: CastViewModel! {
         didSet {
-            guard self.movieCastViewModel != nil else {
+            guard self.castViewModel != nil else {
                 return
             }
             
             self.hideSkeletonAnimation()
             
-            if let imageUrl = URL(string: self.movieCastViewModel.image) {
+            if let imageUrl = URL(string: self.castViewModel.image) {
                 self.castImageView.setImage(withUrl: imageUrl, placeholderImage: nil) {
                     self.castImageView.hideSkeleton()
                     self.layoutSubviews()
                 }
             }
-            self.castNameLabel.text = self.movieCastViewModel.name
-            self.characterLabel.text = self.movieCastViewModel.character
+            self.castNameLabel.text = self.castViewModel.name
+            self.characterLabel.text = self.castViewModel.character
         }
     }
     
