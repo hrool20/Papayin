@@ -23,6 +23,9 @@ class Constants {
         static let applicationJSON: String = "application/json"
     }
     struct Keys {
+        static let genres: String = "genres"
+        static let movieGenres: String = "movieGenres"
+        static let tvShowGenres: String = "tvShowGenres"
         static let apiKey: String = "752cd23fdb3336557bf3d8724e115570"
         static let token: String = "token"
     }

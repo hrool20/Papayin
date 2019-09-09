@@ -16,7 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        GenreService.shared.getGenres(from: .none,
+        successCompletion: { (genres) in
+            if let encoded = try? JSONEncoder().encode(genres) {
+                UserDefaults.standard.set(encoded, forKey: Constants.Keys.genres)
+            }
+        }) { (error) in
+            if let encoded = try? JSONEncoder().encode([Genre]()) {
+                UserDefaults.standard.set(encoded, forKey: Constants.Keys.genres)
+            }
+        }
+        
         return true
     }
 

@@ -80,7 +80,6 @@ extension ListTVShowsCollectionViewController: UICollectionViewDelegateFlowLayou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         
-//        let minimumScreenSize = (UIScreen.main.bounds.width < UIScreen.main.bounds.height) ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
         let width = UIScreen.main.bounds.width - 30
         
         guard !self.listTVShowsViewModels.isEmpty else {

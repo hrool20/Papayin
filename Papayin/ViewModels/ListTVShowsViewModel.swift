@@ -20,16 +20,26 @@ struct ListTVShowsViewModel {
         self.title = tvShow.name
         self.releaseDate = tvShow.firstAirDate
         self.votesAverage = String(format: "%.1f", tvShow.voteAverage)
-        let genres = [Genre]()
+        guard let data = UserDefaults.standard.data(forKey: Constants.Keys.genres),
+            let genres = try? JSONDecoder().decode([Genre].self, from: data) else {
+            self.categories = ""
+            return
+        }
         var aux = ""
         for i in 0..<tvShow.genreIds.count {
             let genre = genres.first { (genre) -> Bool in
                 genre.id == tvShow.genreIds[i]
             }
             if genre != nil {
-                aux = (i == tvShow.genreIds.count - 1) ? "\(genre!.name) |" : "\(genre!.name)"
+                if i == 0 {
+                    aux.append("\(genre!.name)")
+                } else if i != tvShow.genreIds.count - 1 {
+                    aux.append(" | \(genre!.name)")
+                } else {
+                    aux.append((tvShow.genreIds.count == 1) ? "\(genre!.name)." : " | \(genre!.name).")
+                }
             }
         }
-        self.categories = aux
+        self.categories = (aux.isEmpty) ? "-" : aux
     }
 }

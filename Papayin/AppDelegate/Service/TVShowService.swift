@@ -17,7 +17,7 @@ class TVShowService {
                     failureCompletion: @escaping (Error) -> Void) -> Void {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let parameters = [
             "api_key": Constants.apiKey,

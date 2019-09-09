@@ -34,6 +34,7 @@ class ListTVShowsCollectionViewCell: UICollectionViewCell {
                 }
             }
             self.tvShowNameLabel.text = self.listTVShowsViewModel.title
+            self.categoriesLabel.text = self.listTVShowsViewModel.categories
             self.releaseDateLabel.text = self.listTVShowsViewModel.releaseDate
         }
     }
