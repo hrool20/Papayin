@@ -18,7 +18,6 @@
 		D11790782320BDC500118812 /* PapayinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790772320BDC500118812 /* PapayinTests.swift */; };
 		D11790832320BDC500118812 /* PapayinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790822320BDC500118812 /* PapayinUITests.swift */; };
 		D11790932320D59200118812 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790922320D59200118812 /* Constants.swift */; };
-		D117909A2320DF2600118812 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11790992320DF2600118812 /* Login.storyboard */; };
 		D117909D2321606900118812 /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D117909C2321606900118812 /* Movie.storyboard */; };
 		D11790A02321632100118812 /* TVShow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D117909F2321632100118812 /* TVShow.storyboard */; };
 		D11790A22321637A00118812 /* ListMoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11790A12321637A00118812 /* ListMoviesCollectionViewCell.swift */; };
@@ -99,7 +98,6 @@
 		D11790822320BDC500118812 /* PapayinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapayinUITests.swift; sourceTree = "<group>"; };
 		D11790842320BDC500118812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D11790922320D59200118812 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D11790992320DF2600118812 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D117909C2321606900118812 /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		D117909F2321632100118812 /* TVShow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TVShow.storyboard; sourceTree = "<group>"; };
 		D11790A12321637A00118812 /* ListMoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -256,19 +254,10 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		D11790942320DD3700118812 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				D11790992320DF2600118812 /* Login.storyboard */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		D11790962320DE4400118812 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				D11790982320DE7000118812 /* LaunchScreen */,
-				D11790942320DD3700118812 /* Login */,
 				D11790972320DE5A00118812 /* Main */,
 				D117909B2321605100118812 /* Movie */,
 				D117909E2321630F00118812 /* TVShow */,
@@ -289,8 +278,8 @@
 		D11790982320DE7000118812 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D15E97C22326AA9E007DED46 /* SplashScreen */,
 				D117906B2320BDC500118812 /* LaunchScreen.storyboard */,
+				D15E97C22326AA9E007DED46 /* SplashScreen */,
 			);
 			path = LaunchScreen;
 			sourceTree = "<group>";
@@ -311,6 +300,7 @@
 			children = (
 				D117909F2321632100118812 /* TVShow.storyboard */,
 				D1F05C7B232584E7003CC779 /* ListTVShows */,
+				D15E97C72326BF87007DED46 /* TVShowDetail */,
 			);
 			path = TVShow;
 			sourceTree = "<group>";
@@ -346,6 +336,13 @@
 				D15E97C52326AAD6007DED46 /* SplashScreenViewController.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		D15E97C72326BF87007DED46 /* TVShowDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TVShowDetail;
 			sourceTree = "<group>";
 		};
 		D180507623230B0E0088A9A0 /* Service */ = {
@@ -549,7 +546,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D117909D2321606900118812 /* Movie.storyboard in Resources */,
-				D117909A2320DF2600118812 /* Login.storyboard in Resources */,
 				D117906D2320BDC500118812 /* LaunchScreen.storyboard in Resources */,
 				D11790A02321632100118812 /* TVShow.storyboard in Resources */,
 				D117906A2320BDC500118812 /* Assets.xcassets in Resources */,
