@@ -1,39 +1,40 @@
 //
-//  ListMoviesCollectionViewCell.swift
+//  ListTVShowsCollectionViewCell.swift
 //  Papayin
 //
-//  Created by Hugo Rosado on 9/5/19.
+//  Created by Hugo Rosado on 9/8/19.
 //  Copyright © 2019 Example. All rights reserved.
 //
 
 import UIKit
-import AlamofireImage
 import SkeletonView
 
-class ListMoviesCollectionViewCell: UICollectionViewCell {
+class ListTVShowsCollectionViewCell: UICollectionViewCell {
     
     static var reuseIdentifier: String {
-        return "movieViewCell"
+        return "tvShowViewCell"
     }
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieNameLabel: UILabel!
+    @IBOutlet weak var tvShowImageView: UIImageView!
+    @IBOutlet weak var tvShowNameLabel: UILabel!
+    @IBOutlet weak var categoriesLabel: UILabel!
+    @IBOutlet weak var releaseDateImageView: UIImageView!
     @IBOutlet weak var releaseDateLabel: UILabel!
-    var listMoviesViewModel: ListMoviesViewModel! {
+    var listTVShowsViewModel: ListTVShowsViewModel! {
         didSet {
-            guard self.listMoviesViewModel != nil else {
+            guard self.listTVShowsViewModel != nil else {
                 return
             }
             
             self.hideSkeletonAnimation()
             
-            if let imageUrl = URL(string: self.listMoviesViewModel.image) {
-                self.movieImageView.setImage(withUrl: imageUrl, placeholderImage: nil) {
-                    self.movieImageView.hideSkeleton()
+            if let imageUrl = URL(string: self.listTVShowsViewModel.image) {
+                self.tvShowImageView.setImage(withUrl: imageUrl, placeholderImage: nil) {
+                    self.tvShowImageView.hideSkeleton()
                     self.layoutSubviews()
                 }
             }
-            self.movieNameLabel.text = self.listMoviesViewModel.title
-            self.releaseDateLabel.text = self.listMoviesViewModel.releaseDate
+            self.tvShowNameLabel.text = self.listTVShowsViewModel.title
+            self.releaseDateLabel.text = self.listTVShowsViewModel.releaseDate
         }
     }
     
@@ -52,7 +53,7 @@ class ListMoviesCollectionViewCell: UICollectionViewCell {
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         self.layer.shadowOpacity = 0.4
-        self.movieImageView.layer.cornerRadius = 8
+        self.tvShowImageView.layer.cornerRadius = 8
     }
     
     override func prepareForReuse() {
@@ -65,22 +66,25 @@ class ListMoviesCollectionViewCell: UICollectionViewCell {
         let gradient = SkeletonGradient(baseColor: UIColor("#EFEFEF") ?? .gray)
         let animation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .topLeftBottomRight, duration: 1)
         self.isUserInteractionEnabled = false
-        self.movieNameLabel.linesCornerRadius = 5
-        [self.movieImageView, self.movieNameLabel].forEach { (view) in
+        [self.tvShowNameLabel, self.categoriesLabel].forEach { (label) in
+            label?.linesCornerRadius = 5
+        }
+        [self.tvShowImageView, self.tvShowNameLabel, self.categoriesLabel].forEach { (view) in
             view?.showAnimatedGradientSkeleton(usingGradient: gradient, animation: animation)
         }
-        [self.releaseDateLabel].forEach { (view) in
+        [self.releaseDateImageView, self.releaseDateLabel].forEach { (view) in
             view?.isHidden = true
         }
     }
     
     func hideSkeletonAnimation() -> Void {
         self.isUserInteractionEnabled = true
-        [self.releaseDateLabel].forEach { (view) in
+        [self.releaseDateImageView, self.releaseDateLabel].forEach { (view) in
             view?.isHidden = false
         }
-        [self.movieNameLabel].forEach { (view) in
+        [self.tvShowNameLabel, self.categoriesLabel].forEach { (view) in
             view?.hideSkeleton()
         }
     }
+    
 }

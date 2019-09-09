@@ -14,6 +14,7 @@ class Constants {
     struct Url {
         private static let url: String = "https://api.themoviedb.org"
         static let imageUrl: String = "https://image.tmdb.org/t/p/original"
+        static let thumbnailUrl: String = "https://img.youtube.com/vi"
         static var thirdVersionUrl: String {
             return "\(self.url)/3"
         }

@@ -30,7 +30,8 @@ class ListMoviesCollectionViewController: UICollectionViewController {
     }
     
     func getMovies(_ completion: (() -> Void)? = nil) -> Void {
-        MovieService.shared.getMovies(successCompletion: { (movies) in
+        MovieService.shared.getMovies(page: self.page,
+        successCompletion: { (movies) in
             self.listMoviesViewModels = movies.map({ (movie) -> ListMoviesViewModel in
                 return ListMoviesViewModel(movie: movie)
             })
@@ -48,8 +49,8 @@ class ListMoviesCollectionViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showMovieDetail":
-//            let viewController = segue.destination as MovieDetailViewController
-            break
+            let viewController = segue.destination as! MovieDetailViewController
+            viewController.movieId = sender as! Int
         default:
             break
         }
@@ -79,7 +80,8 @@ class ListMoviesCollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showMovieDetail", sender: self.listMoviesViewModels[indexPath.row].movie)
+        self.performSegue(withIdentifier: "showMovieDetail", sender: self.listMoviesViewModels[indexPath.row].movie.id)
+        
         collectionView.deselectItem(at: indexPath, animated: true)
     }
 

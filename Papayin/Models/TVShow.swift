@@ -11,7 +11,8 @@ import SwiftyJSON
 
 class TVShow {
     var id: Int
-    var genres: [Int]
+    var genreIds: [Int]
+    var genres: [Genre]
     var name: String
     var originalName: String
     var posterPath: String
@@ -25,6 +26,7 @@ class TVShow {
     
     init() {
         self.id = 0
+        self.genreIds = []
         self.genres = []
         self.name = ""
         self.originalName = ""
@@ -38,8 +40,9 @@ class TVShow {
         self.originaLanguage = ""
     }
     
-    init(id: Int, genres: [Int], name: String, originalName: String, posterPath: String, backdropPath: String, overview: String, firstAirDate: String, popularity: Float, voteCount: Int, voteAverage: Float, originaLanguage: String) {
+    init(id: Int, genreIds: [Int], genres: [Genre], name: String, originalName: String, posterPath: String, backdropPath: String, overview: String, firstAirDate: String, popularity: Float, voteCount: Int, voteAverage: Float, originaLanguage: String) {
         self.id = id
+        self.genreIds = genreIds
         self.genres = genres
         self.name = name
         self.originalName = originalName
@@ -54,12 +57,13 @@ class TVShow {
     }
     
     convenience init(fromJSONObject jsonObject: JSON) {
-        var genres = [Int]()
-        for genre in jsonObject["genre_ids"].arrayValue {
-            genres.append(genre.intValue)
+        var genreIds = [Int]()
+        for genreId in jsonObject["genre_ids"].arrayValue {
+            genreIds.append(genreId.intValue)
         }
         self.init(id: jsonObject["id"].intValue,
-                  genres: genres,
+                  genreIds: genreIds,
+                  genres: Genre.buildCollection(fromJSONArray: jsonObject["genres"].arrayValue),
                   name: jsonObject["name"].stringValue,
                   originalName: jsonObject["original_name"].stringValue,
                   posterPath: jsonObject["poster_path"].stringValue,

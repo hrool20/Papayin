@@ -15,15 +15,21 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieNameLabel: UILabel!
     @IBOutlet weak var seeTrailerButton: UIButton!
     @IBOutlet weak var overviewTextView: UITextView!
-    @IBOutlet weak var companiesProductionContainerView: UIView!
+    @IBOutlet weak var productionCompaniesContainerView: UIView!
+    @IBOutlet weak var releaseTitleLabel: UILabel!
     @IBOutlet weak var releaseLabel: UILabel!
+    @IBOutlet weak var genresTitleLabel: UILabel!
     @IBOutlet weak var genresLabel: UILabel!
+    @IBOutlet weak var runtimeTitleLabel: UILabel!
     @IBOutlet weak var runtimeLabel: UILabel!
+    @IBOutlet weak var revenueTitleLabel: UILabel!
     @IBOutlet weak var revenueLabel: UILabel!
+    @IBOutlet weak var budgetTitleLabel: UILabel!
     @IBOutlet weak var budgetLabel: UILabel!
+    @IBOutlet weak var productionCountriesTitleLabel: UILabel!
     @IBOutlet weak var productionCountriesLabel: UILabel!
     @IBOutlet weak var castContainerView: UIView!
-    private var movie: Movie!
+    private var movieDetailViewModel: MovieDetailViewModel!
     var movieId: Int!
     
     override func viewDidLoad() {
@@ -32,18 +38,14 @@ class MovieDetailViewController: UIViewController {
         self.navigationItem.title = "Detail"
         
         self.showSkeletonAnimation()
+        
+        self.getMovieDetail {
+            self.getMovieCast()
+        }
     }
     
-    func getMovieDetail() -> Void {
-        MovieService.shared.getMovieDetail(movieId: movieId,
-        successCompletion: { (movie) in
-            self.hideSkeletonAnimation()
-            
-            self.movie = movie
-            
-        }) { (error) in
-            // MARK: Make an action
-        }
+    @IBAction func showTrailerPopup(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showVideos", sender: nil)
     }
     
     func showSkeletonAnimation() -> Void {
@@ -62,19 +64,65 @@ class MovieDetailViewController: UIViewController {
         [self.seeTrailerButton].forEach { (view) in
             view?.isHidden = false
         }
-        [self.movieNameLabel].forEach { (view) in
+        [self.movieNameLabel, self.overviewTextView, self.releaseLabel, self.genresLabel, self.runtimeLabel, self.revenueLabel, self.budgetLabel, self.productionCountriesLabel].forEach { (view) in
             view?.hideSkeleton()
         }
     }
+    
+    func getMovieDetail(_ completion: (() -> Void)? = nil) -> Void {
+        MovieService.shared.getMovieDetail(movieId: self.movieId,
+        successCompletion: { (movie) in
+            self.hideSkeletonAnimation()
+            
+            self.movieDetailViewModel = MovieDetailViewModel(movie: movie)
+            
+            if let imageUrl = URL(string: self.movieDetailViewModel.image) {
+                self.movieImageView.setImage(withUrl: imageUrl, placeholderImage: nil, completion: {
+                    self.movieImageView.hideSkeleton()
+                })
+            }
+            self.movieNameLabel.text = self.movieDetailViewModel.name
+            self.overviewTextView.text = self.movieDetailViewModel.overview
+            if let companyViewController = self.childViewControllers.first as? MovieCompanyProductionCollectionViewController {
+                companyViewController.movieCompanyProductionViewModels = self.movieDetailViewModel.productionCompanies
+            }
+            self.releaseLabel.text = self.movieDetailViewModel.releaseDate
+            self.genresLabel.text = self.movieDetailViewModel.genres
+            self.runtimeLabel.text = self.movieDetailViewModel.runtime
+            self.revenueLabel.text = self.movieDetailViewModel.revenue
+            self.budgetLabel.text = self.movieDetailViewModel.budget
+            self.productionCountriesLabel.text = self.movieDetailViewModel.productionCountries
+            completion?()
+        }) { (error) in
+            // MARK: Make an action
+        }
+    }
+    
+    func getMovieCast() -> Void {
+        MovieService.shared.getMovieCast(movieId: self.movieId,
+        successCompletion: { (cast) in
+            let movieCastViewModels = cast.map({ (aux) -> MovieCastViewModel in
+                return MovieCastViewModel(cast: aux)
+            })
+            if let castViewController = self.childViewControllers.last as? MovieCastCollectionViewController {
+                castViewController.movieCastViewModels = movieCastViewModels
+            }
+        }) { (error) in
+            // MARK: Make an action
+        }
+    }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "showVideos":
+            let vc = segue.destination as! SeeVideosViewController
+            vc.movieId = self.movieId
+        default:
+            break
+        }
     }
-    */
 
 }

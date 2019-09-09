@@ -12,7 +12,8 @@ import SwiftyJSON
 class MovieService {
     static let shared = MovieService()
     
-    func getMovies(successCompletion: @escaping ([Movie]) -> Void,
+    func getMovies(page: Int,
+                   successCompletion: @escaping ([Movie]) -> Void,
                    failureCompletion: @escaping (Error) -> Void) -> Void {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
@@ -20,7 +21,8 @@ class MovieService {
         
         let parameters = [
             "api_key": Constants.apiKey,
-            "release_date.lte": dateFormatter.string(from: Date())
+            "release_date.lte": dateFormatter.string(from: Date()),
+            "page": "\(page)"
         ]
         
         ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/discover/movie", parameters: parameters, successCompletion: { (response) in
@@ -44,19 +46,29 @@ class MovieService {
         }
     }
     
-    func getTVShows(successCompletion: @escaping ([TVShow]) -> Void,
-                    failureCompletion: @escaping (Error) -> Void) -> Void {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        
+    func getMovieVideos(movieId: Int,
+                        successCompletion: @escaping ([Video]) -> Void,
+                        failureCompletion: @escaping (Error) -> Void) -> Void {
         let parameters = [
-            "api_key": Constants.apiKey,
-            "first_air_date.lte": dateFormatter.string(from: Date())
+            "api_key": Constants.apiKey
         ]
         
-        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/discover/tv", parameters: parameters, successCompletion: { (response) in
-            successCompletion(TVShow.buildCollection(fromJSONArray: response["results"].arrayValue))
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/movie/\(movieId)/videos", parameters: parameters, successCompletion: { (response) in
+            successCompletion(Video.buildCollection(fromJSONArray: response["results"].arrayValue))
+        }) { (error) in
+            failureCompletion(error)
+        }
+    }
+    
+    func getMovieCast(movieId: Int,
+                      successCompletion: @escaping ([Cast]) -> Void,
+                      failureCompletion: @escaping (Error) -> Void) -> Void {
+        let parameters = [
+            "api_key": Constants.apiKey
+        ]
+        
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/movie/\(movieId)/credits", parameters: parameters, successCompletion: { (response) in
+            successCompletion(Cast.buildCollection(fromJSONArray: response["cast"].arrayValue))
         }) { (error) in
             failureCompletion(error)
         }

@@ -15,19 +15,19 @@ struct ListTVShowsViewModel {
     let categories: String
     let votesAverage: String
     
-    init(movie: Movie) {
-        self.image = "\(Constants.Url.imageUrl)\(movie.posterPath)"
-        self.title = movie.title
-        self.releaseDate = movie.releaseDate
-        self.votesAverage = String(format: "%.1f", movie.voteAverage)
+    init(tvShow: TVShow) {
+        self.image = "\(Constants.Url.imageUrl)\(tvShow.posterPath)"
+        self.title = tvShow.name
+        self.releaseDate = tvShow.firstAirDate
+        self.votesAverage = String(format: "%.1f", tvShow.voteAverage)
         let genres = [Genre]()
         var aux = ""
-        for i in 0..<movie.genres.count {
+        for i in 0..<tvShow.genreIds.count {
             let genre = genres.first { (genre) -> Bool in
-                genre.id == movie.genres[i]
+                genre.id == tvShow.genreIds[i]
             }
             if genre != nil {
-                aux = (i == movie.genres.count - 1) ? "\(genre!.name) |" : "\(genre!.name)"
+                aux = (i == tvShow.genreIds.count - 1) ? "\(genre!.name) |" : "\(genre!.name)"
             }
         }
         self.categories = aux
