@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6oR-cy-dle">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="QIH-B9-ucK">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6oR-cy-dle" customClass="SplashScreenViewController" customModule="Papayin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rkd-Ki-ANM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clapperboard_filled" translatesAutoresizingMaskIntoConstraints="NO" id="um3-iq-7kj">
+                                <rect key="frame" x="127" y="368" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="2ov-fa-hE9"/>
+                                    <constraint firstAttribute="height" constant="160" id="3i4-vg-Erc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20784313730000001" green="0.85882352939999995" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="um3-iq-7kj" firstAttribute="centerY" secondItem="rkd-Ki-ANM" secondAttribute="centerY" id="KfI-TD-KVV"/>
+                            <constraint firstItem="um3-iq-7kj" firstAttribute="centerX" secondItem="rkd-Ki-ANM" secondAttribute="centerX" id="qx5-RK-WMO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R1L-9N-dWu"/>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="um3-iq-7kj" id="pAK-6o-qYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAw-zy-tyi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179.71014492753625" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clapperboard_filled" width="250" height="250"/>
+    </resources>
+</document>

@@ -33,6 +33,8 @@
 		D15E97BB232616EE007DED46 /* SeeVideosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E97BA232616EE007DED46 /* SeeVideosCollectionViewController.swift */; };
 		D15E97BD232616FC007DED46 /* SeeVideosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E97BC232616FC007DED46 /* SeeVideosCollectionViewCell.swift */; };
 		D15E97BF23262000007DED46 /* SeeVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E97BE23262000007DED46 /* SeeVideosViewModel.swift */; };
+		D15E97C42326AAB8007DED46 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15E97C32326AAB8007DED46 /* SplashScreen.storyboard */; };
+		D15E97C62326AAD6007DED46 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15E97C52326AAD6007DED46 /* SplashScreenViewController.swift */; };
 		D180507923230B4A0088A9A0 /* ResponseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180507823230B4A0088A9A0 /* ResponseHelper.swift */; };
 		D180507B2323124B0088A9A0 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180507A2323124B0088A9A0 /* MovieService.swift */; };
 		D180507E232317A40088A9A0 /* ListMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D180507D232317A40088A9A0 /* ListMoviesViewModel.swift */; };
@@ -112,6 +114,8 @@
 		D15E97BA232616EE007DED46 /* SeeVideosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeVideosCollectionViewController.swift; sourceTree = "<group>"; };
 		D15E97BC232616FC007DED46 /* SeeVideosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeVideosCollectionViewCell.swift; sourceTree = "<group>"; };
 		D15E97BE23262000007DED46 /* SeeVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeVideosViewModel.swift; sourceTree = "<group>"; };
+		D15E97C32326AAB8007DED46 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		D15E97C52326AAD6007DED46 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		D180507823230B4A0088A9A0 /* ResponseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHelper.swift; sourceTree = "<group>"; };
 		D180507A2323124B0088A9A0 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		D180507D232317A40088A9A0 /* ListMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMoviesViewModel.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		D11790982320DE7000118812 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				D15E97C22326AA9E007DED46 /* SplashScreen */,
 				D117906B2320BDC500118812 /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
@@ -332,6 +337,15 @@
 				D15E97BC232616FC007DED46 /* SeeVideosCollectionViewCell.swift */,
 			);
 			path = SeeVideos;
+			sourceTree = "<group>";
+		};
+		D15E97C22326AA9E007DED46 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D15E97C32326AAB8007DED46 /* SplashScreen.storyboard */,
+				D15E97C52326AAD6007DED46 /* SplashScreenViewController.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		D180507623230B0E0088A9A0 /* Service */ = {
@@ -540,6 +554,7 @@
 				D11790A02321632100118812 /* TVShow.storyboard in Resources */,
 				D117906A2320BDC500118812 /* Assets.xcassets in Resources */,
 				D11790652320BDC400118812 /* Main.storyboard in Resources */,
+				D15E97C42326AAB8007DED46 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +694,7 @@
 				D15E97BF23262000007DED46 /* SeeVideosViewModel.swift in Sources */,
 				D180507B2323124B0088A9A0 /* MovieService.swift in Sources */,
 				D180508323231E110088A9A0 /* Genre.swift in Sources */,
+				D15E97C62326AAD6007DED46 /* SplashScreenViewController.swift in Sources */,
 				D127484F232481E600AF255F /* UIImageExtension.swift in Sources */,
 				D11790602320BDC400118812 /* AppDelegate.swift in Sources */,
 				D1F05C892325AC7C003CC779 /* Company.swift in Sources */,
