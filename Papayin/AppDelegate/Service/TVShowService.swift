@@ -59,4 +59,17 @@ class TVShowService {
             failureCompletion(error)
         }
     }
+    
+    func getPopularTVshows(successCompletion: @escaping ([TVShow]) -> Void,
+                          failureCompletion: @escaping (Error) -> Void) -> Void {
+        let parameters = [
+            "api_key": Constants.apiKey
+        ]
+        
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/tv/popular", parameters: parameters, successCompletion: { (response) in
+            successCompletion(TVShow.buildCollection(fromJSONArray: response["results"].arrayValue))
+        }) { (error) in
+            failureCompletion(error)
+        }
+    }
 }

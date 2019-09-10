@@ -73,4 +73,17 @@ class MovieService {
             failureCompletion(error)
         }
     }
+    
+    func getPopularMovies(successCompletion: @escaping ([Movie]) -> Void,
+                          failureCompletion: @escaping (Error) -> Void) -> Void {
+        let parameters = [
+            "api_key": Constants.apiKey
+        ]
+        
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/movie/popular", parameters: parameters, successCompletion: { (response) in
+            successCompletion(Movie.buildCollection(fromJSONArray: response["results"].arrayValue))
+        }) { (error) in
+            failureCompletion(error)
+        }
+    }
 }

@@ -90,7 +90,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="ndD-F8-PrQ">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="8vp-Dl-smQ" customClass="MovieDetailViewController" customModule="Papayin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8vp-Dl-smQ" customClass="MovieDetailViewController" customModule="Papayin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Xf-7f-yiL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
