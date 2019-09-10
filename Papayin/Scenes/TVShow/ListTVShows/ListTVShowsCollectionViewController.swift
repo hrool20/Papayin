@@ -42,15 +42,18 @@ class ListTVShowsCollectionViewController: UICollectionViewController {
         }
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "showTVDetail":
+            let viewController = segue.destination as! TVShowDetailViewController
+            viewController.tvShowId = sender as? Int
+        default:
+            break
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -74,6 +77,12 @@ class ListTVShowsCollectionViewController: UICollectionViewController {
         
         return UICollectionViewCell()
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showTVDetail", sender: self.listTVShowsViewModels[indexPath.row].tvShow.id)
+        
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
 
 }
 extension ListTVShowsCollectionViewController: UICollectionViewDelegateFlowLayout {
@@ -83,9 +92,9 @@ extension ListTVShowsCollectionViewController: UICollectionViewDelegateFlowLayou
         let width = UIScreen.main.bounds.width - 30
         
         guard !self.listTVShowsViewModels.isEmpty else {
-            return CGSize(width: width, height: 150)
+            return CGSize(width: width, height: flowLayout.itemSize.height)
         }
         
-        return CGSize(width: width, height: 150)
+        return CGSize(width: width, height: flowLayout.itemSize.height)
     }
 }

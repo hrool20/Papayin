@@ -12,6 +12,7 @@ class ProductionCompanyCollectionViewController: UICollectionViewController {
 
     var ProductionCompanyViewModels: [ProductionCompanyViewModel]! {
         didSet {
+            self.isLoadedFromFirstTime = false
             self.collectionView?.reloadData()
         }
     }

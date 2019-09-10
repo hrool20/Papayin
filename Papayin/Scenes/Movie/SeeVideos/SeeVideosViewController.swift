@@ -12,7 +12,8 @@ class SeeVideosViewController: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var videosContainerView: UIView!
-    var movieId: Int!
+    var movieId: Int?
+    var tvShowId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class SeeVideosViewController: UIViewController {
         if let videoViewController = self.childViewControllers.first as? SeeVideosCollectionViewController {
             videoViewController.cellWidth = UIScreen.main.bounds.width - 80
             videoViewController.movieId = self.movieId
+            videoViewController.tvShowId = self.tvShowId
         }
     }
     

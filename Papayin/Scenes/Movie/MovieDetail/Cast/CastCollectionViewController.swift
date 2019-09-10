@@ -12,6 +12,7 @@ class CastCollectionViewController: UICollectionViewController {
 
     var castViewModels: [CastViewModel]! {
         didSet {
+            self.isLoadedFromFirstTime = false
             self.collectionView?.reloadData()
         }
     }

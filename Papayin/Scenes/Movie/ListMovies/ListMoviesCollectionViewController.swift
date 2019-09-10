@@ -50,7 +50,7 @@ class ListMoviesCollectionViewController: UICollectionViewController {
         switch segue.identifier {
         case "showMovieDetail":
             let viewController = segue.destination as! MovieDetailViewController
-            viewController.movieId = sender as! Int
+            viewController.movieId = sender as? Int
         default:
             break
         }

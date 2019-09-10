@@ -45,4 +45,18 @@ class TVShowService {
             failureCompletion(error)
         }
     }
+    
+    func getTVShowVideos(tvShowId: Int,
+                        successCompletion: @escaping ([Video]) -> Void,
+                        failureCompletion: @escaping (Error) -> Void) -> Void {
+        let parameters = [
+            "api_key": Constants.apiKey
+        ]
+        
+        ResponseHelper.GET(url: "\(Constants.Url.thirdVersionUrl)/tv/\(tvShowId)/videos", parameters: parameters, successCompletion: { (response) in
+            successCompletion(Video.buildCollection(fromJSONArray: response["results"].arrayValue))
+        }) { (error) in
+            failureCompletion(error)
+        }
+    }
 }

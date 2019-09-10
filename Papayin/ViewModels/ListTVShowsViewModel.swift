@@ -9,6 +9,7 @@
 import Foundation
 
 struct ListTVShowsViewModel {
+    let tvShow: TVShow
     let image: String
     let title: String
     let releaseDate: String
@@ -16,6 +17,7 @@ struct ListTVShowsViewModel {
     let votesAverage: String
     
     init(tvShow: TVShow) {
+        self.tvShow = tvShow
         self.image = "\(Constants.Url.imageUrl)\(tvShow.posterPath)"
         self.title = tvShow.name
         self.releaseDate = tvShow.firstAirDate

@@ -15,13 +15,24 @@ class SeeVideosCollectionViewController: UICollectionViewController {
     private var seeVideosViewModels: [SeeVideosViewModel]!
     private var isLoadedFromFirstTime: Bool!
     var cellWidth: CGFloat!
-    var movieId: Int! {
+    var movieId: Int? {
         didSet {
             guard self.movieId != nil else {
                 return
             }
             
-            self.getVideos {
+            self.getMovieVideos {
+                self.isLoadedFromFirstTime = false
+            }
+        }
+    }
+    var tvShowId: Int? {
+        didSet {
+            guard self.tvShowId != nil else {
+                return
+            }
+            
+            self.getTVShowVideos {
                 self.isLoadedFromFirstTime = false
             }
         }
@@ -34,8 +45,21 @@ class SeeVideosCollectionViewController: UICollectionViewController {
         self.isLoadedFromFirstTime = true
     }
     
-    func getVideos(_ completion: (() -> Void)? = nil) -> Void {
-        MovieService.shared.getMovieVideos(movieId: self.movieId,
+    func getMovieVideos(_ completion: (() -> Void)? = nil) -> Void {
+        MovieService.shared.getMovieVideos(movieId: self.movieId!,
+        successCompletion: { (videos) in
+            self.seeVideosViewModels = videos.map({ (video) -> SeeVideosViewModel in
+                return SeeVideosViewModel(video: video)
+            })
+            completion?()
+            self.collectionView?.reloadData()
+        }) { (error) in
+            // MARK: Make an action
+        }
+    }
+    
+    func getTVShowVideos(_ completion: (() -> Void)? = nil) -> Void {
+        TVShowService.shared.getTVShowVideos(tvShowId: self.tvShowId!,
         successCompletion: { (videos) in
             self.seeVideosViewModels = videos.map({ (video) -> SeeVideosViewModel in
                 return SeeVideosViewModel(video: video)
