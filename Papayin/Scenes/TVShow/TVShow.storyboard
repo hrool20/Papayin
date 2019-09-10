@@ -143,7 +143,9 @@
                                                 <rect key="frame" x="20" y="268.5" width="111" height="37"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                 <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
-                                                <state key="normal" title="See trailer"/>
+                                                <state key="normal" title="See trailer">
+                                                    <color key="titleColor" red="0.20784313730000001" green="0.85882352939999995" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="didSeeVideos:" destination="X2z-4r-Byw" eventType="touchUpInside" id="kUu-GA-lt4"/>
                                                 </connections>

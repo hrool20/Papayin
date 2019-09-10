@@ -12,6 +12,7 @@ class SeasonCollectionViewController: UICollectionViewController {
 
     var seasonViewModels: [SeasonViewModel]! {
         didSet {
+            self.isLoadedFromFirstTime = false
             self.collectionView?.reloadData()
         }
     }
