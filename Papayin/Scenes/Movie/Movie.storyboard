@@ -328,7 +328,7 @@
                                 </connections>
                             </view>
                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDb-Eu-yLF">
-                                <rect key="frame" x="40" y="60" width="334" height="742"/>
+                                <rect key="frame" x="40" y="50" width="334" height="762"/>
                                 <connections>
                                     <segue destination="ppj-Fw-yVx" kind="embed" id="l09-hQ-Xtc"/>
                                 </connections>
@@ -339,10 +339,10 @@
                             <constraint firstItem="Pqw-V7-P7m" firstAttribute="leading" secondItem="X4V-96-cqV" secondAttribute="leading" id="09f-Ci-Isb"/>
                             <constraint firstItem="X4V-96-cqV" firstAttribute="trailing" secondItem="Pqw-V7-P7m" secondAttribute="trailing" id="2Ld-Yc-Nt2"/>
                             <constraint firstItem="X4V-96-cqV" firstAttribute="bottom" secondItem="Pqw-V7-P7m" secondAttribute="bottom" id="Eby-Pm-iw2"/>
-                            <constraint firstItem="X4V-96-cqV" firstAttribute="bottom" secondItem="DDb-Eu-yLF" secondAttribute="bottom" constant="60" id="F7g-yJ-cyN"/>
+                            <constraint firstItem="X4V-96-cqV" firstAttribute="bottom" secondItem="DDb-Eu-yLF" secondAttribute="bottom" constant="50" id="F7g-yJ-cyN"/>
                             <constraint firstItem="DDb-Eu-yLF" firstAttribute="leading" secondItem="X4V-96-cqV" secondAttribute="leading" constant="40" id="a3w-XW-nCY"/>
                             <constraint firstItem="X4V-96-cqV" firstAttribute="trailing" secondItem="DDb-Eu-yLF" secondAttribute="trailing" constant="40" id="aZ2-Rq-fec"/>
-                            <constraint firstItem="DDb-Eu-yLF" firstAttribute="top" secondItem="Ys3-xa-qtc" secondAttribute="top" constant="60" id="gqX-Nu-wkD"/>
+                            <constraint firstItem="DDb-Eu-yLF" firstAttribute="top" secondItem="Ys3-xa-qtc" secondAttribute="top" constant="50" id="gqX-Nu-wkD"/>
                             <constraint firstItem="Pqw-V7-P7m" firstAttribute="top" secondItem="Ys3-xa-qtc" secondAttribute="top" id="poh-6s-6BA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4V-96-cqV"/>

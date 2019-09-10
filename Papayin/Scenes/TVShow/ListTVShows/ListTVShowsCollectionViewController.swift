@@ -31,9 +31,10 @@ class ListTVShowsCollectionViewController: UICollectionViewController {
     func getTVShows(_ completion: (() -> Void)? = nil) -> Void {
         TVShowService.shared.getTVShows(page: self.page,
         successCompletion: { (tvShows) in
-            self.listTVShowsViewModels = tvShows.map({ (tvShow) -> ListTVShowsViewModel in
+            let tvShowViewModels = tvShows.map({ (tvShow) -> ListTVShowsViewModel in
                 return ListTVShowsViewModel(tvShow: tvShow)
             })
+            self.listTVShowsViewModels.append(contentsOf: tvShowViewModels)
             completion?()
             self.collectionView?.reloadData()
         }) { (error) in
@@ -82,6 +83,17 @@ class ListTVShowsCollectionViewController: UICollectionViewController {
         self.performSegue(withIdentifier: "showTVDetail", sender: self.listTVShowsViewModels[indexPath.row].tvShow.id)
         
         collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard !self.listTVShowsViewModels.isEmpty else {
+            return
+        }
+        
+        if indexPath.row == self.listTVShowsViewModels.count - 1 {
+            self.page += 1
+            self.getTVShows()
+        }
     }
 
 }

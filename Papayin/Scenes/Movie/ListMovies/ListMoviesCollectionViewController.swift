@@ -32,9 +32,10 @@ class ListMoviesCollectionViewController: UICollectionViewController {
     func getMovies(_ completion: (() -> Void)? = nil) -> Void {
         MovieService.shared.getMovies(page: self.page,
         successCompletion: { (movies) in
-            self.listMoviesViewModels = movies.map({ (movie) -> ListMoviesViewModel in
+            let movieViewModels = movies.map({ (movie) -> ListMoviesViewModel in
                 return ListMoviesViewModel(movie: movie)
             })
+            self.listMoviesViewModels.append(contentsOf: movieViewModels)
             completion?()
             self.collectionView?.reloadData()
         }) { (error) in
@@ -83,6 +84,17 @@ class ListMoviesCollectionViewController: UICollectionViewController {
         self.performSegue(withIdentifier: "showMovieDetail", sender: self.listMoviesViewModels[indexPath.row].movie.id)
         
         collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard !self.listMoviesViewModels.isEmpty else {
+            return
+        }
+        
+        if indexPath.row == self.listMoviesViewModels.count - 1 {
+            self.page += 1
+            self.getMovies()
+        }
     }
 
 }
